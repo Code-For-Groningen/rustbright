@@ -50,11 +50,19 @@ Very modern design!
 ### Mockups
 
 #### Authentication flow
+<div align="center">
 
 ![Authentication Mockup](assets/authentication.png)
 
+</div>
+
 #### Main UI + Grading
+
+<div align="center">
+
 ![Main UI Mockup](assets/flow.png)
+
+</div>
 
 #### Review
 TODO: Review assignments and grades (maybe outside of scope for now)
