@@ -22,6 +22,12 @@ flowchart LR
     style C fill:#DC002D,color:#fff
     style D fill:#0095E9,color:#fff
 ```
+#### Mockup
+<div align="center">
+
+![Authentication Mockup](assets/authentication.png)
+
+</div>
 
 ### Application Flow
 ```mermaid
@@ -32,7 +38,15 @@ flowchart LR
     style E fill:#E87511,color:#fff
 ```
 
-### UI
+#### Main UI Mockup
+
+<div align="center">
+
+![Main UI Mockup](assets/flow.png)
+
+</div>
+
+### UI Styling
 View course content, grades, and assignments in a user-friendly interface.
 
 #### Colors
@@ -55,25 +69,10 @@ View course content, grades, and assignments in a user-friendly interface.
 
 Very modern design!
 
-### Mockups
 
-#### Authentication flow
-<div align="center">
-
-![Authentication Mockup](assets/authentication.png)
-
-</div>
-
-#### Main UI + Grading
-
-<div align="center">
-
-![Main UI Mockup](assets/flow.png)
-
-</div>
-
-#### Review
-TODO: Review assignments and grades (maybe outside of scope for now)
+## TODOs
+- [ ] Review assignments and grades (maybe outside of scope for now)
+- [ ] Actually implement shit
 
 
 
