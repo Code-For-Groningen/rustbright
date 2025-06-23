@@ -6,3 +6,5 @@ authors = ["divadiahim", "confestim"]
 
 [dependencies]
 gtk = { version = "0.9.7", package = "gtk4", features = ["v4_18"] }
+tao = "0.33.0"
+wry = "0.51.2"
