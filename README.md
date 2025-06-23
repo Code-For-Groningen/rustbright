@@ -5,23 +5,31 @@ Brightspace UI (specifically for TAs) written in Rust.
 - [Gtk-rs](https://gtk-rs.org/)
 - [Gnome design repository](https://gitlab.gnome.org/Teams/Design/)
 - [Gtk-4 docs](https://docs.gtk.org/gtk4/)
+- [Brightspace API documentation](https://docs.valence.desire2learn.com/reference.html)
 
 ## Design
 Inspired by Gnome's design principles.
 
 ### Authentication
-<!-- Use tauri for a webview to capture cookies -->
-<!-- tauri logo -->
 ![Tauri Logo](https://tauri.app/_astro/logo.DCjQDXhk.svg)
 (might be a bit overkill)
 ```mermaid
-flowchart TD
-    A[User] -->|Login| B[Headless Webview]
-    B --> C[Cookie Storage]
-    C --> D[API Requests]
-    D --> E[Brightspace API]
-    E --> F[Data Response]
-    F --> G[Display Data]
+flowchart LR
+    A[Login] --> B[Headless Browser] --> C[Brightspace]
+    C --> D[2FA] --> B --> E[Cookies]
+    
+    style A fill:#006FBF,color:#fff
+    style C fill:#DC002D,color:#fff
+    style D fill:#0095E9,color:#fff
+```
+
+### Application Flow
+```mermaid
+flowchart LR
+    A[Cookies] --> B[API] --> C[Parser] --> D[GTK UI] --> E[Grading] --> B
+    
+    style D fill:#0095E9,color:#fff
+    style E fill:#E87511,color:#fff
 ```
 
 ### UI
