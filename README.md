@@ -49,4 +49,15 @@ Very modern design!
 
 ### Mockups
 
+#### Authentication flow
+
+![Authentication Mockup](assets/authentication.png)
+
+#### Main UI + Grading
+![Main UI Mockup](assets/flow.png)
+
+#### Review
+TODO: Review assignments and grades (maybe outside of scope for now)
+
+
 
