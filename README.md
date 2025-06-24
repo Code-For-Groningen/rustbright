@@ -11,8 +11,6 @@ Brightspace UI (specifically for TAs) written in Rust.
 Inspired by Gnome's design principles.
 
 ### Authentication
-![Tauri Logo](https://tauri.app/_astro/logo.DCjQDXhk.svg)
-(might be a bit overkill)
 ```mermaid
 flowchart LR
     A[Login] --> B[Headless Browser] --> C[Brightspace]
