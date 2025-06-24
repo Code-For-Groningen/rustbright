@@ -2,7 +2,6 @@ use std::error::Error;
 use headless_chrome::{Browser, Tab};
 use std::env;
 use serde_json;
-use headless_chrome::protocol::cdp::Page;
 use std::sync::Arc;
 
 const DEFAULT_BS_URL: &str = "https://brightspace.rug.nl/d2l/home";
@@ -32,20 +31,6 @@ fn debug_println(message: &str) {
     // but for Rust, it will only print in debug mode
     #[cfg(debug_assertions)]
     println!("{}", message);
-}
-
-fn debug_screenshot(tab: &Tab, filename: &str) -> Result<(), Box<dyn Error>> {
-    if !cfg!(debug_assertions) {
-        return Ok(());
-    }
-    debug_println(&format!("Taking screenshot: {}", filename));
-    let screenshot_data = tab.capture_screenshot(
-        Page::CaptureScreenshotFormatOption::Jpeg,
-        None,
-        None,
-        true)?;
-    std::fs::write(&format!("{}.jpg", filename), screenshot_data)?;
-    Ok(())
 }
 
 pub fn start_login(user: &str, password: &str) -> Result<Option<Session>, Box<dyn Error>> {
@@ -105,7 +90,7 @@ pub fn complete_2fa(session: Session, code: &str) -> Result<String, Box<dyn Erro
     let submit_button = session.tab.wait_for_element("#loginButton2")?;
     submit_button.scroll_into_view()?;
     submit_button.click()?;
-    
+
     // xfactor.rug.nl -> brightspace.rug.nl
     wait_with_timeout("brightspace.rug.nl", "2FA failed, check code", &session.tab, 10)?;
     
