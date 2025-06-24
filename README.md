@@ -50,15 +50,6 @@ flowchart LR
 View course content, grades, and assignments in a user-friendly interface.
 
 #### Colors
-
-| Color Name | Hex Code | Preview | Usage |
-|------------|----------|---------|-------|
-| University Red | `#CC0000` | ![#CC0000](https://dummyimage.com/20x20/CC0000/CC0000) | Primary brand color (University of Groningen) |
-| Brightspace Dark Red | `#DC002D` | ![#7C021C](https://dummyimage.com/20x20/DC002D/DC002D) | Secondary accent color |
-| Brightspace Blue | `#006FBF` | ![#275374](https://dummyimage.com/20x20/006FBF/006FBF) | Background color for Brightspace elements |
-| Brightspace Light Blue | `#0095E9` | ![#0095E9](https://dummyimage.com/20x20/0095E9/0095E9) | Highlight color for links and buttons |
-| Brightspace Orange | `#E87511` | ![#E87511](https://dummyimage.com/20x20/E87511/E87511) | Accent color for notifications and alerts |
-
 ![Color Palette](assets/ColorPalette.png)
 
 #### Fonts
@@ -68,6 +59,18 @@ View course content, grades, and assignments in a user-friendly interface.
 | Roboto | Secondary font for UI elements and buttons |
 
 Very modern design!
+
+### File Structure
+```
+src/
+├── main.rs          # Main entry point
+├── auth/         # Authentication logic
+|  ├── mod.rs
+|  └── login.rs
+├── api/          # API interaction
+|  ├── mod.rs
+|  └── client.rs
+```
 
 
 ## TODOs
